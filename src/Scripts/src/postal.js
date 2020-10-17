@@ -70,7 +70,12 @@
         var _origin = extractOrigin(window.location.href);
 
         function extractOrigin(url) {
-            return /^(https?:\/\/[^/]+)\//.exec(url)[1] || null;
+            var result;
+            if (window.location.href.startsWith("vscode"))
+                result = /^(vscode-webview?:\/\/[^/]+)\//.exec(url)[1] || null;
+            else if (window.location.href.startsWith("https"))
+                result = /^(https?:\/\/[^/]+)\//.exec(url)[1] || null;
+            return result;
         }
 
         function distributeMessage(e) {
@@ -471,7 +476,11 @@
             var parents = [];
 
             // Find all parent windows
-            var nextWindow = window.self;
+            var nextWindow;
+            if (window.location.href.startsWith("vscode"))
+                nextWindow = window.frames.top;
+            else if (window.location.href.startsWith("http"))
+                nextWindow = window.self;
             while (nextWindow.top !== nextWindow) {
                 nextWindow = nextWindow.opener || nextWindow.parent;
                 parents.unshift(nextWindow);

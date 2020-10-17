@@ -98,10 +98,11 @@ namespace Weavy.Utils {
                 }));
 
                 // google and o365       
+                /*
                 if (allowdFunc(typeof(CloudLink).GUID)) {
                     content.Add(new { Url = "#google-modal", Icon = "google-drive", Color = "native", Name = "Google Drive file", Param = "", SortOrder = 2, Css = "", Path = "" });
                     content.Add(new { Url = "#o365-modal", Icon = "office", Color = "native", Name = "Office 365 file", Param = "", SortOrder = 3, Css = "", Path = "" });
-                }
+                } */
 
                 if (content.Any()) {
                     menu.InnerHtml += @"<h6 class=""dropdown-header"">New</h6>";
@@ -117,7 +118,7 @@ namespace Weavy.Utils {
                 // files
                 var files = new List<dynamic>();
                 if (allowdFunc(typeof(File).GUID)) {
-                    files.Add(new { Url = "#filebrowser-modal", Icon = "cloud", Color = "light-blue", Name = "Cloud", Param = "", Css = "d-desktop" });
+                    // files.Add(new { Url = "#filebrowser-modal", Icon = "cloud", Color = "light-blue", Name = "Cloud", Param = "", Css = "d-desktop" });
                     files.Add(new { Url = "upload", Icon = "laptop", Color = "theme-700", Name = "Your computer", Param = "", Css = "" });
 
                 }
