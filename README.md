@@ -13,9 +13,14 @@ This repository is a fork from https://github.com/davekoncsol/weavy-hackathon-ta
 2. Create a new Database with name "**weavy**"
 3. Start the Visual Studio
 4. Select "Clone a repository"
-5. Give the url of this repo i.e "https://github.com/Better-Boy/veavy-server"
-6. Once the repo is ready ---> Click on "Debug ---> Start Debugging"
-7. A browser tab should open with weavy login
+![clone-repo](./images/clone.png)
+1. Give the url of this repo i.e https://github.com/Better-Boy/veavy-server
+![clone-git-repo](./images/github-url-clone.png)
+1. Once the repo is ready ---> Click on "Debug ---> Start Without Debugging"
+![vs-start](./images/vs-start.png)
+1. A browser tab should open with weavy login
+1. Once you login, head over to "/manage" and create a new client with "Client Id" as "clientid" and "Client Secret" as "clientsecret"
+![client-secret](./images/client-secret.png)
 
 
 For complete detailed video, refer - https://www.youtube.com/watch?v=T4k3bAES2Rk&ab_channel=WeavyCollaborationHack2020
